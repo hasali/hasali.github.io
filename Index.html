@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel = "stylesheet" type = "text/css" href="CSS/myWebsite.css">
+	<script src = "https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.5/angular.js"></script>
+	<script src = "https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.5/angular-route.min.js"></script>
+	<script type = "text/javascript" src = Scripts/script.js></script>
+</head>	
+	<body ng-app="myApp">
+		
+		<div class = "menu hide">
+			
+			<ul id = "slide" class = "navbar">
+				<li><a href = "#/">Home</a></li>
+				<li><a href = "#About.html">About</a></li>
+				<li><a href = "#Projects.html">Projects</a></li>
+		 	</ul>
+			
+			<div  class = "banner hide">
+				
+				<p>Junior Software Developer</p>
+				
+			</div>
+			<div class = "viewprofilebtn hide">
+				<a href = "javascript:void(0)" onclick = "closeNav()">View Profile</a>
+			</div>
+		</div>
+ 		<div class = "main" ng-view></div> 
+	</body>
+</html>
