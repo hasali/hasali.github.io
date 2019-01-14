@@ -41,7 +41,7 @@ app.config(function($routeProvider) {
 		templateUrl : 'About.html'
 		//controller : 'AboutController'
 	})
-	//.otherwise({redirectTo: '/'});
+	.otherwise({redirectTo: '/'});
 });
 
   
