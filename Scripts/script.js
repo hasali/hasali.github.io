@@ -22,7 +22,8 @@ function closeNav()
 }
 var app = angular.module('myApp', ['ngRoute']); 
 
-app.config(function($routeProvider) {
+app.config(function($locationProvider, $routeProvider) {
+	$locationProvider.html5Mode(true);
 	$routeProvider
 
 	// .when('/', {
@@ -41,7 +42,7 @@ app.config(function($routeProvider) {
 		templateUrl : 'About.html'
 		//controller : 'AboutController'
 	})
-	//.otherwise({redirectTo: '/'});
+	.otherwise({redirectTo: '/'});
 });
 
   
