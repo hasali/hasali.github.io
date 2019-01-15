@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<style type="text/css">
+    body:before {
+      content: attr(message);
+    }
+  </style>
+	<meta charset="utf-8" />
 	<link rel = "stylesheet" type = "text/css" href="CSS/myWebsite.css">
 	<script src = "https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.5/angular.js"></script>
 	<script src = "https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.5/angular-route.min.js"></script>
@@ -26,5 +32,20 @@
 			</div>
 		</div>
  		<div class = "main" ng-view></div> 
+ 		<script>
+    (function(){
+      var redirect = sessionStorage.redirect;
+      delete sessionStorage.redirect;
+      if (redirect && redirect != location.href) {
+        history.replaceState(null, null, redirect);
+        // REMOVE THIS - just showing the redirect route in the UI
+        document.body.setAttribute('message', 'This page was redirected by 404.html, from the route: ' + redirect);
+      }
+      else {
+        // REMOVE THIS - just showing the redirect route in the UI
+        document.body.setAttribute('message', 'This page was loaded directly from the index.html file');
+      }
+    })();
+  </script>
 	</body>
 </html>
