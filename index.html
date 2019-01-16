@@ -2,50 +2,58 @@
 <html>
 <head>
 	<style type="text/css">
-    body:before {
-      content: attr(message);
-    }
-  </style>
+		body:before {
+			content: attr(message);
+		}
+	</style>
 	<meta charset="utf-8" />
 	<link rel = "stylesheet" type = "text/css" href="CSS/myWebsite.css">
 	<script src = "https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.5/angular.js"></script>
 	<script src = "https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.5/angular-route.min.js"></script>
 	<script type = "text/javascript" src = Scripts/script.js></script>
+	<!-- <base href = "file:///C:/Users/Hassan/Documents/Projects/Website/index.html" /> -->
 </head>	
-	<body ng-app="myApp">
-		
-		<div class = "menu hide">
-			
-			<ul id = "slide" class = "navbar">
-				<li><a href = "#/">Home</a></li>
-				<li><a href = "#About.html">About</a></li>
-				<li><a href = "#Projects.html">Projects</a></li>
-		 	</ul>
-			
-			<div  class = "banner hide">
-				
-				<p>Junior Software Developer</p>
-				
-			</div>
-			<div class = "viewprofilebtn hide">
-				<a href = "javascript:void(0)" onclick = "closeNav()">View Profile</a>
-			</div>
+<body ng-app="myApp">
+
+	<div class = "menu hide">
+		<script type="text/ng-template" id="Pages/about.html">
+			<h1>About</h1>
+			<h3>{{message}}</h3>
+		</script>
+		<script type="text/ng-template" id="Pages/Projects.html">
+			<h1>About</h1>
+			<h3>{{message}}</h3>
+		</script>
+		<ul id = "slide" class = "navbar">
+			<li><a href = "#/">Home</a></li>
+			<li><a href = "#About.html">About</a></li>
+			<li><a href = "#Projects.html">Projects</a></li>
+		</ul>
+
+		<div  class = "banner hide">
+
+			<p>Junior Software Developer</p>
+
 		</div>
- 		<div class = "main" ng-view></div> 
- 		<script>
-    (function(){
-      var redirect = sessionStorage.redirect;
-      delete sessionStorage.redirect;
-      if (redirect && redirect != location.href) {
-        history.replaceState(null, null, redirect);
+		<div class = "viewprofilebtn hide">
+			<a href = "javascript:void(0)" onclick = "closeNav()">View Profile</a>
+		</div>
+	</div>
+	<div class = "main" ng-view></div> 
+	<script>
+		(function(){
+			var redirect = sessionStorage.redirect;
+			delete sessionStorage.redirect;
+			if (redirect && redirect != location.href) {
+				history.replaceState(null, null, redirect);
         // REMOVE THIS - just showing the redirect route in the UI
         document.body.setAttribute('message', 'This page was redirected by 404.html, from the route: ' + redirect);
-      }
-      else {
+    }
+    else {
         // REMOVE THIS - just showing the redirect route in the UI
         document.body.setAttribute('message', 'This page was loaded directly from the index.html file');
-      }
-    })();
-  </script>
-	</body>
+	    }
+	})();
+	</script>
+</body>
 </html>

@@ -23,26 +23,31 @@ function closeNav()
 var app = angular.module('myApp', ['ngRoute']); 
 
 app.config(function($locationProvider, $routeProvider) {
-	$locationProvider.html5Mode(true);
+	//$locationProvider.html5Mode(true);
 	$routeProvider
 
-	// .when('/', {
-	// 	templateUrl : '/home.html'
-	// 	//controller : 'HomeController'
-			
-	// })
-
-	.when('Pages/Projects', {
-		templateUrl : 'Projects.html'
+	.when('/', {
+		templateUrl : '/index.html'
 		//controller : 'HomeController'
 			
 	})
 
-	.when('Pages/About', {
-		templateUrl : 'About.html'
-		//controller : 'AboutController'
+	.when('/Projects', {
+		templateUrl : 'Pages/Projects.html',
+		controller : 'ProjectsController'
+			
+	})
+
+	.when('/About', {
+		templateUrl : 'Pages/About.html',
+		controller : 'AboutController'
 	})
 	.otherwise({redirectTo: '/'});
 });
 
-  
+ app.controller('AboutController', function($scope){
+ 	$scope.message = "Hello from AboutController";
+ });
+ app.controller('ProjectsController', function($scope){
+ 	$scope.message = "Hello from ProjectsController";
+ });
