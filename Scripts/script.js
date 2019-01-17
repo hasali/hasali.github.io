@@ -23,31 +23,37 @@ function closeNav()
 var app = angular.module('myApp', ['ngRoute']); 
 
 app.config(function($locationProvider, $routeProvider) {
-	//$locationProvider.html5Mode(true);
+	//$locationProvider.hashPrefix('');
+	//$locationProvider.html5Mode({enabled:true, requireBase: false});
 	$routeProvider
 
-	.when('/Home', {
+	.when('/', {
 		templateUrl : 'Pages/Home.html'
 		//controller : 'HomeController'
 			
 	})
 
 	.when('/Projects', {
-		templateUrl : 'Pages/Projects.html',
-		controller : 'ProjectsController'
+		templateUrl : 'Pages/Projects.html'
+		//controller : 'ProjectsController'
 			
 	})
 
 	.when('/About', {
-		templateUrl : 'Pages/About.html',
-		controller : 'AboutController'
-	})
-	.otherwise({redirectTo: '/'});
+		templateUrl : 'Pages/About.html'
+		//controller : 'AboutController'
+	});
+	//.otherwise({redirectTo: '/'});
 });
 
- app.controller('AboutController', function($scope){
- 	$scope.message = "Hello from AboutController";
- });
- app.controller('ProjectsController', function($scope){
- 	$scope.message = "Hello from ProjectsController";
- });
+ // app.controller('AboutController', function($scope){
+ // 	$scope.message = "Hello from About Controller";
+ // });
+
+ // app.controller('ProjectsController', function($scope){
+ // 	$scope.message = "Hello from Projects Controller";
+ // });
+
+ //  app.controller('HomeController', function($scope){
+ // 	$scope.message = "Hello from Home Controller";
+ // });

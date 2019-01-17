@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="myApp">
 <head>
 	<style type="text/css">
 		body:before {
@@ -13,21 +13,25 @@
 	<script type = "text/javascript" src = Scripts/script.js></script>
 	<!-- <base href = "file:///C:/Users/Hassan/Documents/Projects/Website/index.html" /> -->
 </head>	
-<body ng-app="myApp">
+<body>
 
 	<div class = "menu hide">
-		<script type="text/ng-template" id="Pages/about.html">
+		<script type="text/ng-template" id = "Pages/Home.html">
+			<h1>Home</h1>
+			<h3>{{message}}</h3>
+		</script>
+		<script type="text/ng-template" id = "Pages/About.html">
 			<h1>About</h1>
 			<h3>{{message}}</h3>
 		</script>
-		<script type="text/ng-template" id="Pages/Projects.html">
-			<h1>About</h1>
+		<script type="text/ng-template" id = "Pages/Projects.html">
+			<h1>Projects</h1>
 			<h3>{{message}}</h3>
 		</script>
 		<ul id = "slide" class = "navbar">
-			<li><a href = "#Home">Home</a></li>
-			<li><a href = "#About.html">About</a></li>
-			<li><a href = "#Projects.html">Projects</a></li>
+			<li><a href = "#!/">Home</a></li>
+			<li><a href = "#!/About">About</a></li>
+			<li><a href = "#!/Projects">Projects</a></li>
 		</ul>
 
 		<div  class = "banner hide">
@@ -40,7 +44,7 @@
 		</div>
 	</div>
 	<div class = "main" ng-view></div> 
-	<script>
+	<!-- <script>
 		(function(){
 			var redirect = sessionStorage.redirect;
 			delete sessionStorage.redirect;
@@ -54,6 +58,6 @@
         document.body.setAttribute('message', 'This page was loaded directly from the index.html file');
 	    }
 	})();
-	</script>
+	</script> -->
 </body>
 </html>
