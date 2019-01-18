@@ -46,6 +46,10 @@ app.config(function($locationProvider, $routeProvider) {
 	.otherwise({redirectTo: '/'});
 });
 
+app.run(['$location', function ($location) {
+    $location.path('/About');
+}]);
+
  // app.controller('AboutController', function($scope){
  // 	$scope.message = "Hello from About Controller";
  // });
