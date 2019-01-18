@@ -47,7 +47,7 @@ app.config(function($locationProvider, $routeProvider) {
 });
 
 app.run(['$location', function ($location) {
-    $location.path('/About');
+    $location.path('/');
 }]);
 
  // app.controller('AboutController', function($scope){
