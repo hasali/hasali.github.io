@@ -42,8 +42,8 @@ app.config(function($locationProvider, $routeProvider) {
 	.when('/About', {
 		templateUrl : 'Pages/About.html'
 		//controller : 'AboutController'
-	});
-	//.otherwise({redirectTo: '/'});
+	})
+	.otherwise({redirectTo: '/'});
 });
 
  // app.controller('AboutController', function($scope){
