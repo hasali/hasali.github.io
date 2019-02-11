@@ -92,7 +92,7 @@ body {
 .main {
 	position: relative;
 	top: 100px;
-	z-index: 2;
+	z-index: -1;
 }
 
 /*.main{
