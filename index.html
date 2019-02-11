@@ -1,0 +1,56 @@
+
+<html ng-app="myApp">
+<head>
+	<style type="text/css">
+		body:before {
+			content: attr(message);
+		}
+	</style>
+	<meta charset="utf-8" />
+	<link rel = "stylesheet" type = "text/css" href="CSS/myWebsite.css">
+	<script src = "https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.5/angular.js"></script>
+	<script src = "https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.5/angular-route.min.js"></script>
+	<script type = "text/javascript" src = Scripts/script.js></script>
+	<!-- <base href = "file:///C:/Users/Hassan/Documents/Projects/Website/index.html" /> -->
+</head>	
+<body>
+
+	<div class = "menu hide">
+
+
+
+
+
+		<ul id = "slide" class = "navbar">
+			<li><a href = "#!/">Home</a></li>
+			<li><a href = "#!/About">About</a></li>
+			<li><a href = "#!/Projects">Projects</a></li>
+		</ul>
+
+		<div  class = "banner hide">
+
+			<p>Junior Software Developer</p>
+
+		</div>
+		<div class = "viewprofilebtn hide">
+			<a href = "javascript:void(0)" onclick = "closeNav()">View Profile</a>
+		</div>
+	</div>
+	<div class = "main" ng-view></div> 
+	<!-- <script>
+		(function(){
+			var redirect = sessionStorage.redirect;
+			delete sessionStorage.redirect;
+			if (redirect && redirect != location.href) {
+				history.replaceState(null, null, redirect);
+        // REMOVE THIS - just showing the redirect route in the UI
+        document.body.setAttribute('message', 'This page was redirected by 404.html, from the route: ' + redirect);
+    }
+    else {
+        // REMOVE THIS - just showing the redirect route in the UI
+        document.body.setAttribute('message', 'This page was loaded directly from the index.html file');
+	    }
+	})();
+	</script> -->
+</body>
+</html>
