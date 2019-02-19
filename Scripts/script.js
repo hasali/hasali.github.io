@@ -8,7 +8,7 @@ function closeNav()
   	{
   		if(i === 0)
   		{
-  			hide[i].style.height = "7%";	
+  			hide[i].style.height = "12%";	
   		}
   		else
   		{
