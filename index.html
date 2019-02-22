@@ -2,46 +2,45 @@
 <html ng-app="myApp">
 <head>
 	<style type="text/css">
-		body:before {
-			content: attr(message);
-		}
-	</style>
-	<meta charset="utf-8" />
-	<link rel = "stylesheet" type = "text/css" href="CSS/myWebsite.css">
-	<script src = "https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.5/angular.js"></script>
-	<script src = "https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.5/angular-route.min.js"></script>
-	<script type = "text/javascript" src = Scripts/script.js></script>
-	<!-- <base href = "file:///C:/Users/Hassan/Documents/Projects/Website/index.html" /> -->
+	body:before {
+		content: attr(message);
+	}
+</style>
+<meta charset="utf-8" />
+<link rel = "stylesheet" type = "text/css" href="CSS/myWebsite.css">
+<script src = "https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.5/angular.js"></script>
+<script src = "https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.5/angular-route.min.js"></script>
+<script type = "text/javascript" src = Scripts/script.js></script>
+<!-- <base href = "file:///C:/Users/Hassan/Documents/Projects/Website/index.html" /> -->
 </head>	
 <body>
-
 	<div class = "menu hide">
-
-
-
-
-		<a class = "logo" href="https://hasali.github.io">
-			<p>Hassan Mahmood</p>
-			<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+		<div class="group">
+			<a class = "logo slide" href="https://hasali.github.io">
 				
+				<svg width="100" height="77" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
 
-				<g>
-					<title>Layer 1</title>
-					<circle id="svg_67" r="31" cy="45" cx="56" stroke-width="5" stroke="#f1f1f1" fill ="#ff0080"/>
-					<text stroke = "#f1f1f1" xml:space="preserve" text-anchor="middle" font-size="28" id="svg_44" y="55" x="48" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="1" fill="#f1f1f1">H</text>
-					<text stroke="#f1f1f1" xml:space="preserve" text-anchor="middle" font-size="28" id="svg_45" y="55" x="62"  stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="1" fill="#f1f1f1">M</text>
-					
-				</g>
+					<g>
+						
+						<circle id="svg_67" r="29" cy="45" cx="56" stroke-width="5" stroke="#f1f1f1" fill ="#ff0080"/>
+						<text stroke = "#f1f1f1" xml:space="preserve" text-anchor="middle" font-size="28" id="svg_44" y="55" x="48" stroke-width="1" fill="#f1f1f1">H</text>
+						<text stroke="#f1f1f1" xml:space="preserve" text-anchor="middle" font-size="28" id="svg_45" y="55" x="62" stroke-width="1" fill="#f1f1f1">M</text>
+						
+					</g>
+				</svg>
+				<div class = "logo-name">
+					<p>HASSAN MAHMOOD</p>
+				
+					<p>Front-End Developer</p>
+				</div>
+			</a>
+			<ul class = "navbar slide">
 
-			</svg>
+				<li><a href = "#!/">Home</a></li>
+				<li><a href = "#!/About">About</a></li>
+				<li><a href = "#!/Projects">Projects</a></li>
+			</ul>
 		</div>
-		<ul id = "slide" class = "navbar">
-
-			<li><a href = "#!/">Home</a></li>
-			<li><a href = "#!/About">About</a></li>
-			<li><a href = "#!/Projects">Projects</a></li>
-		</ul>
-
 		<div  class = "banner hide">
 
 			<p>Hi, my name is Hassan Mahmood.</p>
@@ -49,7 +48,8 @@
 
 		</div>
 		<div class = "viewprofilebtn hide">
-			<a href = "javascript:void(0)" onclick = "closeNav()">View Profile</a>
+			<a href = "javascript:void(0)" onclick = "closeNav()">View Profile</a><br><br>
+			<object class = "double-arrow hvr-bob" type = "image/svg+xml" data = "images/double-chevron-up.svg"></object>
 		</div>
 	</div>
 	<div class = "main" ng-view></div> 

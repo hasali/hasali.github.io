@@ -1,8 +1,8 @@
 body {
 	font-family: 'Lato', sans-serif;
 	margin:0;
-	display: flex;
-	flex-direction: column;
+	/*display: flex;
+	flex-direction: column;*/
 	background-color: #f9f9f9;
 }
 
@@ -19,7 +19,33 @@ body {
 	box-shadow: 0px 1px 10px #3a3a3a;
 
 }
+.group {
+	display: flex;
+	height: 77px;
+}
+.logo {
+	display: flex;
+	//width: auto;
+	text-decoration: none;
+	transform: translateX(-100%);
+	transition: transform 1s;
+	transition-delay: 0.4s;
+	padding-left: 100px;
+}
 
+.logo-name {
+
+	color: #f1f1f1;
+	//text-decoration: none;
+	font-size: 17px;
+	font-weight:700;
+	//text-transform: uppercase;
+	margin: 0.1px;
+}
+
+div.logo-name p:nth-of-type(2){
+	font-size: 14px;
+}
 .navbar {
 
 	z-index: 1;
@@ -31,6 +57,7 @@ body {
 	transition: transform 1s;
 	transition-delay: 0.4s;
 	width: auto;
+	padding-right: 100px; 
 }
 
 .navbar a {
@@ -62,11 +89,48 @@ body {
 .banner p {
 	color:#f1f1f1;
 	font-size: 35px;
-	font-weight: 600;
+	font-weight: 300;
 	//padding: 1px;
 }
+@keyframes hvr-bob {
+  0% {
+    -webkit-transform: translateY(-8px);
+    transform: translateY(-15px);
+  }
+  50% {
+    -webkit-transform: translateY(-4px);
+    transform: translateY(-8px);
+  }
+  100% {
+    -webkit-transform: translateY(-8px);
+    transform: translateY(-15px);
+  }
+}
+.hvr-bob {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+   -webkit-animation-name: hvr-bob-float, hvr-bob;
+  animation-name: hvr-bob-float, hvr-bob;
+  -webkit-animation-duration: .3s, 1.5s;
+  animation-duration: .3s, 1.5s;
+  -webkit-animation-delay: 0s, .3s;
+  animation-delay: 0s, .3s;
+  -webkit-animation-timing-function: ease-out, ease-in-out;
+  animation-timing-function: ease-out, ease-in-out;
+  -webkit-animation-iteration-count: 1, infinite;
+  animation-iteration-count: 1, infinite;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation-direction: normal, alternate;
+  animation-direction: normal, alternate;
+}
+
 
 .viewprofilebtn {
+	//display: flex;
 	text-align: center;
 	position: relative;
 	top: 50%;
@@ -86,6 +150,9 @@ body {
 	text-transform: uppercase;
 	//width: 100%;
 	height: 15px;
+}
+.double-arrow{
+	height: 20px;
 }
 .banner a:hover{
 	

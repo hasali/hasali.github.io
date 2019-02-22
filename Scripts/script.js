@@ -3,12 +3,12 @@
 function closeNav() 
 {
 	var hide = document.getElementsByClassName("hide");
-	var navslide = document.getElementById("slide");
+	var navslide = document.getElementsByClassName("slide");
   	for(var i = 0; i < hide.length; i++)
   	{
   		if(i === 0)
   		{
-  			hide[i].style.height = "12%";	
+  			hide[i].style.height = "11%";	
   		}
   		else
   		{
@@ -16,7 +16,10 @@ function closeNav()
   			
   		}	
     }
-    navslide.style.transform = "translateX(0%)";
+    for(var i = 0; i < navslide.length; i++)
+    {
+    	navslide[i].style.transform = "translateX(0%)";
+	}
 
 
 }
