@@ -4,11 +4,14 @@ function closeNav()
 {
 	var hide = document.getElementsByClassName("hide");
 	var navslide = document.getElementsByClassName("slide");
+	//var nav = document.getElementById("navbar");
+
   	for(var i = 0; i < hide.length; i++)
   	{
   		if(i === 0)
   		{
-  			hide[i].style.height = "11%";	
+  			hide[i].style.height = "18%";
+  			
   		}
   		else
   		{

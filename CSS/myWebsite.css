@@ -7,75 +7,151 @@ body {
 }
 
 .menu {
-	display: flex;
-	flex-direction: column;
+	display: block;
+	//flex-direction: column;
 	overflow: hidden;
-	background-color: #ff0080;
+	background-color: #ff0066;
 	top: 0;
 	width: 100%;
-	height: 650px;
+	height: 85%;
 	position: fixed;
 	transition: 0.5s;
 	box-shadow: 0px 1px 10px #3a3a3a;
 
 }
-.group {
+#group {
+	height: auto;
+	//width: 100%;
 	display: flex;
-	height: 77px;
+	//justify-content: flex-end;
+	padding: 1% 0% 0% 0%;
+	position: relative;
+	margin: 0 auto;
+	max-width: 1080px;
+	//overflow: hidden;
 }
 .logo {
+	//overflow: hidden;
+	top: 0;
+	flex: 0 0 240px;
+	//flex-basis: 25%;
 	display: flex;
-	//width: auto;
+	//vertical-align: middle;
+	position: relative;
+    padding: 0;
+    margin: 0;
+	//width: 228px;
+	//height: 100%;	
 	text-decoration: none;
-	transform: translateX(-100%);
-	transition: transform 1s;
-	transition-delay: 0.4s;
-	padding-left: 100px;
+	transform: translateX(-200%);
+	transition: transform 0.7s;
+	transition-delay: 0.7s;
+	//padding-left: 100px;
+	//float: left;
+	
 }
 
 .logo-name {
-
+	//vertical-align: middle;
+	//top: 20%;
+	margin-left: 1%;
+	//height: auto;
+	//display: inline-block;
+	//margin: 0 auto;
 	color: #f1f1f1;
-	//text-decoration: none;
-	font-size: 17px;
+	font-size: 15px;
 	font-weight:700;
-	//text-transform: uppercase;
-	margin: 0.1px;
+	position: relative;
+	line-height: 20px;
+	//width: auto;
+
+}
+.logo-name p{
+
+	top: 20%;
+	position: relative;
+	margin: 0;
+	letter-spacing: 1px;
+
+}
+#logo-rim{
+
+	stroke: white;
+	transition-duration: 0.5s;
+}
+.logo:hover #logo-rim{
+	
+	stroke: #99003d;
+	transition-duration: 0.5s;
+	
 }
 
 div.logo-name p:nth-of-type(2){
-	font-size: 14px;
-}
-.navbar {
+	font-size: 13px;
 
+}
+
+#navbar {
+	display: flex;
+	//vertical-align: middle;
+	//float: right;
+	flex: 0 0 75%;
+	//align-self: flex-end;
 	z-index: 1;
 	list-style-type: none;
-	display: flex; 
-	position: absolute;
-	right: 50px;
-	transform: translateX(100%);
+	position: relative;
+	transform: translateX(200%);
 	transition: transform 1s;
 	transition-delay: 0.4s;
-	width: auto;
-	padding-right: 100px; 
+	margin: 0;
+	padding: 0;
+	//width: auto;
+	justify-content: flex-end;
+	
 }
-
-.navbar a {
+#navbar li{
+	//justify-content: f;
+	//top: calc(12.5%);
+	position: relative;
+	display: inline;
+	padding: 5px 16px;
+	//float: left;
+}
+#navbar a {
+	position: relative;
 	color: #f1f1f1;
 	//text-align: right;
-	padding: 5px 16px;
+	padding-bottom: 1px;
 	text-decoration: none;
 	font-size: 12px;
 	font-weight:700;
 	text-transform: uppercase;
 }
-
-.navbar a:hover {
-	
+#navbar a:before  {
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 1.2px ;
+	bottom: -5;
+	//left: 0;
+	background-color: #99003d;
+	visibility: hidden;
+	transform: scaleX(0);
+	transition: all 0.2s ease-in-out 0s;
 }
+#navbar a:hover:before, .navbar a:focus:before{
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
 
+}
+#navbar a:focus{
+	border-bottom: 1.2px solid white;
+     color: white;
+     padding-bottom: 6px;
+}
 .banner {
-	
+	//box-sizing: border-box;
 	//display: none;
 	text-align: center;
 	position: relative;
@@ -133,7 +209,7 @@ div.logo-name p:nth-of-type(2){
 	//display: flex;
 	text-align: center;
 	position: relative;
-	top: 50%;
+	top: 45%;
 	width: 100%;
 	height: auto;
 	//border: 3px solid black;
@@ -153,6 +229,7 @@ div.logo-name p:nth-of-type(2){
 }
 .double-arrow{
 	height: 20px;
+	color: white;
 }
 .banner a:hover{
 	

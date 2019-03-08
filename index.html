@@ -15,16 +15,16 @@
 </head>	
 <body>
 	<div class = "menu hide">
-		<div class="group">
+		<div id = "group">
 			<a class = "logo slide" href="https://hasali.github.io">
 				
-				<svg width="100" height="77" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+				<svg width="65" height="65" viewBox = "0 0 65 65" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
 
 					<g>
 						
-						<circle id="svg_67" r="29" cy="45" cx="56" stroke-width="5" stroke="#f1f1f1" fill ="#ff0080"/>
-						<text stroke = "#f1f1f1" xml:space="preserve" text-anchor="middle" font-size="28" id="svg_44" y="55" x="48" stroke-width="1" fill="#f1f1f1">H</text>
-						<text stroke="#f1f1f1" xml:space="preserve" text-anchor="middle" font-size="28" id="svg_45" y="55" x="62" stroke-width="1" fill="#f1f1f1">M</text>
+						<circle id="logo-rim" r="29" cy="33" cx="32" stroke-width="5" stroke="#f1f1f1" fill ="#ff0066"/>
+						<text stroke = "#f1f1f1" xml:space="preserve" text-anchor="middle" font-size="28" id="svg_44" y="43" x="24" stroke-width="1" fill="#f1f1f1">H</text>
+						<text stroke="#f1f1f1" xml:space="preserve" text-anchor="middle" font-size="28" id="svg_45" y="43" x="39" stroke-width="1" fill="#f1f1f1">M</text>
 						
 					</g>
 				</svg>
@@ -34,7 +34,7 @@
 					<p>Front-End Developer</p>
 				</div>
 			</a>
-			<ul class = "navbar slide">
+			<ul id = "navbar" class = "slide" role = "navigation">
 
 				<li><a href = "#!/">Home</a></li>
 				<li><a href = "#!/About">About</a></li>
@@ -49,7 +49,9 @@
 		</div>
 		<div class = "viewprofilebtn hide">
 			<a href = "javascript:void(0)" onclick = "closeNav()">View Profile</a><br><br>
-			<object class = "double-arrow hvr-bob" type = "image/svg+xml" data = "images/double-chevron-up.svg"></object>
+			
+				<object class = "double-arrow hvr-bob" type = "image/svg+xml" data = "images/double-chevron-up.svg"></object>
+			
 		</div>
 	</div>
 	<div class = "main" ng-view></div> 
