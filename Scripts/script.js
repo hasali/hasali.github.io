@@ -1,6 +1,6 @@
 
 
-function closeNav() 
+function closeBanner() 
 {
 	var hide = document.getElementsByClassName("hide");
 	var navslide = document.getElementsByClassName("slide");
@@ -10,7 +10,7 @@ function closeNav()
   	{
   		if(i === 0)
   		{
-  			hide[i].style.height = "18%";
+  			hide[i].style.height = "12.5%";
   			
   		}
   		else
@@ -34,9 +34,9 @@ app.config(function($locationProvider, $routeProvider) {
 	$routeProvider
 
 	.when('/', {
-		templateUrl : 'Pages/Home.html'
+		templateUrl : 'Pages/Home.html',
 		//controller : 'HomeController'
-			
+		resolve: { tmp: function ($timeout) { return $timeout(function () { }, 2000); } } 	
 	})
 
 	.when('/Projects', {
