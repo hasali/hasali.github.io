@@ -271,13 +271,43 @@ div.logo-name p:nth-of-type(2)
 
 .main 
 {
+	//height: 100%;
 	position: relative;
 	top: 25%;
 	z-index: -1;
 }
 
-/*.main{
-	padding: 16px;
-	margin-top: 30px;
-	height: 1500px;
-}*/
+footer
+{
+	background: #3b3c3f;
+	//display: block;
+	top: 25%;
+	padding: 2em 0;
+	position: relative;
+	z-index: -1;
+}
+
+.footer-container
+{
+	
+	margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.footer-container p
+{
+	text-align: center;
+    color: #f1f1f1;
+    font-size: 11px;
+    font-weight: 400;
+    margin: 0;
+    padding: 2.5em 0 0;
+}
+
+.footer-container a
+{
+	color: #ff0066;
+	text-decoration: none;
+}

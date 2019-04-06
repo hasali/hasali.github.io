@@ -5,6 +5,7 @@
 	color: #3b3c3f;
 	//text-decoration: underline;	
 }
+
 .content
 {
 	box-sizing: border-box;
@@ -18,11 +19,13 @@
     max-width: 720px
    
 }
+
 .content h3
 {
 	color: #99003d;
 	text-align: center;
 }
+
 .content p
 {
 	margin-top: 2em;
@@ -40,6 +43,7 @@
 	justify-content: center;
 	margin: 2em 0;
 }
+
 .img-align img
 {
 	//text-align: center;
