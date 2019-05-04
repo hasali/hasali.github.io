@@ -1,2 +1,80 @@
-<h1>Projects</h1>
-<p>Stuff about project</p>
+<html>
+<head>
+	<!-- <script src = "https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.5/angular.js"> </script> -->
+	<link rel = "stylesheet" type = "text/css" href="CSS/stylePages.css">
+	
+	<!-- <link rel = "stylesheet" type = "text/css" href="CSS/styleProjects.css"> -->
+</head>
+<body>
+	<div class = "title">
+		<h1>Projects</h1>
+		
+	</div>
+
+	<div class = "content">
+		<div class = "app">
+			<h3>Weather App <span p>(jQuery, Handlbars.js)</p></span></h3>
+			<div class = "canvas">
+				<div class = "imagespec">
+					<img class = "myImg" src = "Images/full-display.png" alt = "Full Display">
+				</div>
+				<div class = "imagespec">
+					<img class = "myImg" src = "Images/main-display.png" alt = "Weather Display">
+				</div>
+				<div class = "imagespec">
+					<img class = "myImg" src = "Images/graph-display.png" alt = "Graph Representation">
+				</div>
+			</div>
+			
+			<p>Crude weather app built with jQuery while utilizing HandleBars as a templating engine.</p>
+		</div>
+		<div class = "app">
+			<h3>Casanova</h3>
+			<div class = "canvas">
+				<div class = "imagespec">
+					<img class = "myImg" src = "Images/casanova-mainmenu.png" alt = "Main Menu">
+					<img class = "zoom" src = "Images/magnifying-glass.png">
+				</div>
+				<div class = "imagespec">
+					<img class = "myImg" src = "Images/casanova-game.png" alt = "Gameplay">
+					<img class = "zoom" src = "Images/magnifying-glass.png">
+				</div>
+				<div class = "imagespec">
+					<img class = "myImg" src = "Images/casanova-hs.png" alt = "Highscore">
+					<img class = "zoom" src = "Images/magnifying-glass.png">
+				</div>
+			</div>
+				
+			<p>An imitation of ferry-halims Casanova. Following a Singleton game archtiecture first, the game engine was made with the help of Simple and Fast Multimedia Library(SFML) in C++.</p>
+		</div>
+		<div class = "app">
+			<h3>Magic Of Adlez</h3>
+			<div class = "canvas">
+				<div class = "imagespec">
+					<img class = "myImg" src = "Images/moz-mainmenu.png" alt = "Main Menu">
+					<img class = "zoom" src = "Images/magnifying-glass.png">
+				</div>
+				<div class = "imagespec">
+					<img class = "myImg" src = "Images/moz-game.png" alt = "Gameplay">
+					<img class = "zoom" src = "Images/magnifying-glass.png">
+				</div>
+				<div class = "imagespec">
+					<img class = "myImg" src = "Images/moz-boss.png" alt = "Boss Gameplay">
+					<img class = "zoom" src = "Images/magnifying-glass.png">
+				</div>
+			</div>
+			
+			<p></p>
+		</div>
+		<div id = "myModal" class = 'modal'>
+			<img class="modal-content" id="img01">
+			<div id="caption"></div>
+		</div>
+	</div>
+
+	<script>
+		var url = "/Scripts/modalScript.js";
+		$.getScript(url);
+	</script>
+</body>
+</html>

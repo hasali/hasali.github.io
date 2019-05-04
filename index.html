@@ -1,5 +1,5 @@
 
-<html ng-app="myApp">
+<html ng-app="myApp" ng-controller="MainCtrl">
 <head>
 	<title>Hassan Mahmood</title>
 	<style type="text/css">
@@ -9,9 +9,12 @@
 </style>
 <meta charset="utf-8" />
 <link rel = "stylesheet" type = "text/css" href="CSS/styleMain.css">
+<script src = "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
 <script src = "https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.5/angular.js"></script>
 <script src = "https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.5/angular-route.min.js"></script>
 <script type = "text/javascript" src = Scripts/script.js></script>
+
+<link rel="stylesheet" ng-href="{{css}}">
 <!-- <base href = "file:///C:/Users/Hassan/Documents/Projects/Website/index.html" /> -->
 </head>	
 <body>
@@ -25,7 +28,7 @@
 						
 						<circle id="logo-rim" r="29" cy="33" cx="32" stroke-width="5" stroke="#f1f1f1" fill ="#ff0066"/>
 						<text stroke = "#f1f1f1" xml:space="preserve" text-anchor="middle" font-size="28" id="svg_44" y="43" x="24" stroke-width="1" fill="#f1f1f1">H</text>
-						<text stroke="#f1f1f1" xml:space="preserve" text-anchor="middle" font-size="28" id="svg_45" y="43" x="39" stroke-width="1" fill="#f1f1f1">M</text>
+						<text stroke="#f1f1f1" xml:space="preserve" text-anchor="middle" font-size="28" id="svg_45" y="43" x="38.5" stroke-width="1" fill="#f1f1f1">M</text>
 						
 					</g>
 				</svg>
@@ -37,9 +40,9 @@
 			</a>
 			<ul id = "navbar" class = "slide" role = "navigation">
 
-				<li><a href = "#!/">Home</a></li>
+				<li><a href = "#!/">Projects</a></li>
 				<li><a href = "#!/About">About</a></li>
-				<li><a href = "#!/Projects">Projects</a></li>
+				<li><a href = "#!/Contact">Contact</a></li>
 			</ul>
 		</div>
 		<div  class = "banner hide">
@@ -55,7 +58,7 @@
 			
 		</div>
 	</div>
-	
+	<img>
 	<div class = "main" ng-view></div> <!--SPA-->
 	
 	<footer>
@@ -66,6 +69,6 @@
 			</p>		
 		</div>
 	</footer>
-		
+	
 </body>
 </html>

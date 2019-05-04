@@ -34,13 +34,14 @@ app.config(function($locationProvider, $routeProvider) {
 	$routeProvider
 
 	.when('/', {
-		templateUrl : 'Pages/Home.html',
+		templateUrl : 'Pages/Projects.html',
 		//controller : 'HomeController'
-		resolve: { tmp: function ($timeout) { return $timeout(function () { }, 2000); } } 	
+		//resolve: { tmp: function ($timeout) { return $timeout(function () { }, 2000); } }
+		css: 'CSS/styleProjects.css'
 	})
 
-	.when('/Projects', {
-		templateUrl : 'Pages/Projects.html'
+	.when('/Contact', {
+		templateUrl : 'Pages/Contact.html'
 		//controller : 'ProjectsController'
 			
 	})
@@ -55,6 +56,18 @@ app.config(function($locationProvider, $routeProvider) {
 app.run(['$location', function ($location) {
     $location.path('/');
 }]);
+
+app.controller('MainCtrl', function($scope, $routeParams, $route, $location) 
+{
+  $scope.$watch(function()
+  {
+    return ($route.current && $route.current.css) ? $route.current.css : 'CSS/styleMain.css';
+  }, 
+  function(value) 
+  {
+    $scope.css = value;
+  });
+});
 
  // app.controller('AboutController', function($scope){
  // 	$scope.message = "Hello from About Controller";

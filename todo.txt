@@ -1,0 +1,24 @@
+CSS
+-------------------------------
+-fade-in projects.html onclick viewprofilebtn
+-center navbar contents more effectively
+-handle logo and navbar slide-in effect more effectively
+-fade effect when changing views
+-magnifying glass on images
+-images touch-up?
+-add github logo/link for projects
+-add logo/links for technologies used for projects (side)
+
+-change color scheme
+-add responsiveness
+
+
+
+HTML/Functionality
+--------------------------------
+-add more to project description
+-finish contacts page
+-add contact form?
+-move site to dynamic page hosting service provider
+
+
