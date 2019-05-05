@@ -37,7 +37,7 @@ app.config(function($locationProvider, $routeProvider) {
 		templateUrl : 'Pages/Projects.html',
 		//controller : 'HomeController'
 		//resolve: { tmp: function ($timeout) { return $timeout(function () { }, 2000); } }
-		css: 'CSS/styleProjects.css'
+		css: 'assets/css/styleProjects.css'
 	})
 
 	.when('/Contact', {
@@ -61,7 +61,7 @@ app.controller('MainCtrl', function($scope, $routeParams, $route, $location)
 {
   $scope.$watch(function()
   {
-    return ($route.current && $route.current.css) ? $route.current.css : 'CSS/styleMain.css';
+    return ($route.current && $route.current.css) ? $route.current.css : 'assets/css/styleMain.css';
   }, 
   function(value) 
   {

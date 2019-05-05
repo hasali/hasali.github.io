@@ -34,7 +34,7 @@ img:hover{
 }
 img:hover:after
 {
-	content: url(../Images/unity-logo.png);
+	content: url(../images/unity-logo.png);
 	display: block;
 	position: absolute;
 	top: 50%;
