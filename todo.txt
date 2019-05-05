@@ -20,5 +20,5 @@ HTML/Functionality
 -finish contacts page
 -add contact form?
 -move site to dynamic page hosting service provider
-
+-rename appropriately
 
