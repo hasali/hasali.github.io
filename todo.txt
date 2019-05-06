@@ -8,7 +8,7 @@ CSS
 -images touch-up?
 -add github logo/link for projects
 -add logo/links for technologies used for projects (side)
-
+-collapsable 'more images'
 -change color scheme
 -add responsiveness
 
