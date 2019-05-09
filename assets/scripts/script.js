@@ -1,4 +1,16 @@
+window.onload = function()
+{
+  document.getElementById("viewprofilebtn").addEventListener("click", fadeIn);
+}
+function fadeIn()
+{
+  var fadeItems = document.getElementsByClassName("fade");
 
+  for(var i = 0; i < fadeItems.length; i++ )
+  {
+    fadeItems[i].style.display = "block";
+  }
+}
 
 function closeBanner() 
 {

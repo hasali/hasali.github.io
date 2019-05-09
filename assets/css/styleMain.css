@@ -235,7 +235,7 @@ div.logo-name p:nth-of-type(2)
   animation-direction: normal, alternate;
 }
 
-.viewprofilebtn 
+#viewprofilebtn 
 {
 	//display: flex;
 	text-align: center;
@@ -247,7 +247,7 @@ div.logo-name p:nth-of-type(2)
 
 }
 
-.viewprofilebtn a 
+#viewprofilebtn a 
 {
 	color: #f1f1f1;
 	text-decoration: none;
@@ -317,6 +317,11 @@ footer
 	width: 100px;
 	height: 200px;
 	background-color: red;
+}
+.fade
+{
+	display: none;
+	
 }
 /*.setup:hover
 {

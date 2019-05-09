@@ -13,11 +13,12 @@
 }
 .imagespec 
 {
-	width: 200px;
-	height: 200px;
+	width: 210px;
+	height: 140px;
 	margin: 25px;
 	position: relative;
 }
+
 .imagespec .myImg
 {
 	
@@ -26,19 +27,22 @@
 	//margin: 25px;
 	filter: brightness(100%);
 	//border: solid #f9f9f9;
-	border-radius: 10px;
+	//border-radius: 10px;
 	//position: relative;
 }
-img:hover{
+
+img:hover
+{
 	position: relative;
 }
+
 img:hover:after
 {
 	content: url(../images/unity-logo.png);
 	display: block;
 	position: absolute;
 	top: 50%;
-	
+	//z-index: 2;
 	right: 50%;
 	
 	width: 100%;
