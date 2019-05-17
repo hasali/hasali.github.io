@@ -8,12 +8,13 @@
 	}
 </style>
 <meta charset="utf-8" />
+
 <link rel = "stylesheet" type = "text/css" href="assets/css/styleMain.css">
 <script src = "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
 <script src = "https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.5/angular.js"></script>
 <script src = "https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.5/angular-route.min.js"></script>
 <script type = "text/javascript" src = assets/scripts/script.js></script>
-
+<script src = "https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.8/angular-animate.js"></script>
 <link rel="stylesheet" ng-href="{{css}}">
 <!-- <base href = "file:///C:/Users/Hassan/Documents/Projects/Website/index.html" /> -->
 </head>	
@@ -59,10 +60,12 @@
 		</div>
 	</div>
 	<img>
-	<div class = "main fade" ng-view></div> <!--SPA-->
+	<div class = "main mainHidden">
+		<div class = "fade" ng-view></div>
+	</div> <!--SPA-->
 	
 	<footer>
-		<div class = "footer-container fade">
+		<div class = "footer-container">
 			<p>
 				© 2019 
 				<a href = "https://hasali.github.io"> Hassan Mahmood</a>. All Rights Reserved

@@ -19,6 +19,7 @@ HTML/Functionality
 -add more to project description
 -finish contacts page
 -add contact form?
+-look into dynamic github pages
 -move site to dynamic page hosting service provider
 -rename file/function/class/id names more appropriately
 

@@ -1,15 +1,13 @@
+
 window.onload = function()
 {
-  document.getElementById("viewprofilebtn").addEventListener("click", fadeIn);
+  document.getElementById("viewprofilebtn").addEventListener("click", showMain);
 }
-function fadeIn()
+function showMain()
 {
-  var fadeItems = document.getElementsByClassName("fade");
-
-  for(var i = 0; i < fadeItems.length; i++ )
-  {
-    fadeItems[i].style.display = "block";
-  }
+  var fadeI = angular.element(document.querySelector('.mainHidden'));
+  fadeI.addClass('mainVisible');
+  
 }
 
 function closeBanner() 
@@ -38,7 +36,7 @@ function closeBanner()
 
 
 }
-var app = angular.module('myApp', ['ngRoute']); 
+var app = angular.module('myApp', ['ngRoute', 'ngAnimate']); 
 
 app.config(function($locationProvider, $routeProvider) {
 	//$locationProvider.hashPrefix('');

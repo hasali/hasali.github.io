@@ -1,9 +1,6 @@
 .app
 {
-	
-	
 	border-bottom: solid grey;
-	
 }
 .canvas
 {
@@ -53,7 +50,6 @@ img:hover:after
 .imagespec img:hover
 {
 	filter:brightness(75%);
-
 }
 
 .myImg 
@@ -110,3 +106,4 @@ img:hover:after
   .modal-content {
     width: 100%;
   }
+}
