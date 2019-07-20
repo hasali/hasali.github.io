@@ -1,8 +1,11 @@
 
 window.onload = function()
 {
+
   document.getElementById("viewprofilebtn").addEventListener("click", showMain);
+
 }
+
 function showMain()
 {
   var fadeI = angular.element(document.querySelector('.mainHidden'));
@@ -36,9 +39,12 @@ function closeBanner()
 
 
 }
-var app = angular.module('myApp', ['ngRoute', 'ngAnimate']); 
+//var col = document.getElementsByClassName("slide");
 
-app.config(function($locationProvider, $routeProvider) {
+
+angular.module('myApp', ['ngRoute', 'ngAnimate', 'routeStyles', 'angularSlideables'])
+
+.config(function($locationProvider, $routeProvider) {
 	//$locationProvider.hashPrefix('');
 	//$locationProvider.html5Mode({enabled:true, requireBase: false});
 	$routeProvider
@@ -46,7 +52,7 @@ app.config(function($locationProvider, $routeProvider) {
 	.when('/', {
 		templateUrl : 'Pages/Projects.html',
 		//controller : 'HomeController'
-		//resolve: { tmp: function ($timeout) { return $timeout(function () { }, 2000); } }
+		
 		css: 'assets/css/styleProjects.css'
 	})
 
@@ -57,27 +63,60 @@ app.config(function($locationProvider, $routeProvider) {
 	})
 
 	.when('/About', {
-		templateUrl : 'Pages/About.html'
+		templateUrl : 'Pages/About.html',
 		//controller : 'AboutController'
+    css: 'assets/css/styleAbout.css'
 	})
 	.otherwise({redirectTo: '/'});
-});
 
-app.run(['$location', function ($location) {
-    $location.path('/');
+
+  })
+.controller('imgController',['$scope', function($scope){
+
+  // $scope.showImg = false;
+  // $scope.flipBtn = false;
+
+  // $scope.changeBtn = function(ev)
+  // {
+  //   // for(var i = 0; i < btns.length; i++)
+  //   // {
+  //   //   if(!$scope.flipBtn)
+  //   //     $scope.flipBtn = true;
+  //   //   else
+  //   //     $scope.flipBtn = false;
+  //   // }
+  //   var element = ev.srcElement ? ev.srcElement : ev.target;
+  //   console.log(element.);
+  // };
+  
+}])
+
+.directive('toggleClass', function() {
+  return {
+      restrict: 'A',
+      link: function(scope, element, attrs) {
+          element.parent().bind('click', function() {
+              element.toggleClass(attrs.toggleClass);
+          });
+      }
+  };
+})
+.run(['$location', function ($location) {
+  $location.path('/');
 }]);
 
-app.controller('MainCtrl', function($scope, $routeParams, $route, $location) 
-{
-  $scope.$watch(function()
-  {
-    return ($route.current && $route.current.css) ? $route.current.css : 'assets/css/styleMain.css';
-  }, 
-  function(value) 
-  {
-    $scope.css = value;
-  });
-});
+
+// app.controller('MainCtrl', function($scope, $routeParams, $route, $location) 
+// {
+//   $scope.$watch(function()
+//   {
+//     return ($route.current && $route.current.css) ? $route.current.css : 'assets/css/styleMain.css';
+//   }, 
+//   function(value) 
+//   {
+//     $scope.css = value;
+//   });
+// });
 
  // app.controller('AboutController', function($scope){
  // 	$scope.message = "Hello from About Controller";

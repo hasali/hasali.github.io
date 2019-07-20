@@ -2,6 +2,7 @@
 <head>
 	<!-- <script src = "https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.5/angular.js"> </script> -->
 	<link rel = "stylesheet" type = "text/css" href="assets/css/stylePages.css">
+	<!-- <link rel = "stylesheet" type = "text/css" href="assets/css/styleProjects.css"> -->
 	<script>
 		var url = "assets/scripts/modalScript.js";
 		$.getScript(url);
@@ -14,60 +15,52 @@
 		
 	</div>
 
-	<div class = "content">
+	<div class = "content" ng-controller="imgController">
 		<div class = "app">
-			<h3>Weather App <span p>(jQuery, Handlbars.js)</p></span></h3>
-			<div class = "canvas">
-				<div class = "imagespec">
-					<img class = "myImg" src = "assets/images/full-display.png" alt = "Full Display">
-				</div>
-				<div class = "imagespec">
-					<img class = "myImg" src = "assets/images/main-display.png" alt = "Weather Display">
-				</div>
-				<div class = "imagespec">
-					<img class = "myImg" src = "assets/images/graph-display.png" alt = "Graph Representation">
-				</div>
+			<div class = "app-nav">
+				<h3>Weather App </h3>
+			
+				<md-button class = "btn" toggle-class = "minBtn" slide-toggle="#slideId1"></md-button>
+			</div>
+			<div class = "slideable" id = "slideId1"  >
+				
+				<img class = "myImg" ng-src = "assets/images/full-display.png" alt = "Full Display">
+				<img class = "myImg" ng-src = "assets/images/main-display.png" alt = "Weather Display">
+				<img class = "myImg" ng-src = "assets/images/graph-display.png" alt = "Graph Representation">
+				
 			</div>
 			
 			<p>Crude weather app built with jQuery while utilizing HandleBars as a templating engine.</p>
 		</div>
 		<div class = "app">
-			<h3>Casanova</h3>
-			<div class = "canvas">
-				<div class = "imagespec">
-					<img class = "myImg" src = "assets/images/casanova-mainmenu.png" alt = "Main Menu">
-					<!-- <img class = "zoom"  src = "Images/magnifying-glass.png"> -->
-				</div>
-				<div class = "imagespec">
-					<img class = "myImg" src = "assets/images/casanova-game.png" alt = "Gameplay">
-					
-				</div>
-				<div class = "imagespec">
-					<img class = "myImg" src = "assets/images/casanova-hs.png" alt = "Highscore">
-					
-				</div>
+			<div class = "app-nav">
+				<h3>Casanova</h3>
+				<md-button class = "btn" toggle-class = "minBtn" slide-toggle = "#slideId2" ></md-button>
 			</div>
+			<div class = "slideable" id = "slideId2">
 				
+				<img class = "myImg" src = "assets/images/casanova-mainmenu.png" alt = "Main Menu">
+				<img class = "myImg" src = "assets/images/casanova-game.png" alt = "Gameplay">
+				<img class = "myImg" src = "assets/images/casanova-hs.png" alt = "Highscore" width>
+
+			</div>
+
 			<p>An imitation of ferry-halims Casanova. Following a Singleton game archtiecture first, the game engine was made with the help of Simple and Fast Multimedia Library(SFML) in C++.</p>
 		</div>
 		<div class = "app">
-			<h3>Magic Of Adlez</h3>
-			<div class = "canvas">
-				<div class = "imagespec">
-					<img class = "myImg" src = "assets/images/moz-mainmenu.png" alt = "Main Menu">
-					
-				</div>
-				<div class = "imagespec">
-					<img class = "myImg" src = "assets/images/moz-game.png" alt = "Gameplay">
-					
-				</div>
-				<div class = "imagespec">
-					<img class = "myImg" src = "assets/images/moz-boss.png" alt = "Boss Gameplay">
-					
-				</div>
+			<div class = "app-nav">
+				<h3>Magic Of Adlez</h3>
+				<md-button class = "btn" toggle-class = "minBtn" slide-toggle = "#slideId3" ></md-button>
+			</div>
+			<div class = "slideable" id = "slideId3">
+				
+				<img class = "myImg" src = "assets/images/moz-mainmenu.png" alt = "Main Menu">
+				<img class = "myImg" src = "assets/images/moz-game.png" alt = "Gameplay">
+				<img class = "myImg" src = "assets/images/moz-boss.png" alt = "Boss Gameplay">
+
 			</div>
 			
-			<p></p>
+			<p>3D Adventure game that has hotbar based combat made in Unity.</p>
 		</div>
 		<div id = "myModal" class = 'modal'>
 			<img class="modal-content" id="img01">

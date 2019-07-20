@@ -1,13 +1,13 @@
 CSS
 -------------------------------
--fade-in projects.html onclick viewprofilebtn
+-fade-in projects.html onclick viewprofilebtn (c)
 -center navbar contents more effectively
 -handle logo and navbar slide-in effect more effectively
 -fade effect when changing views
--magnifying glass on images
+-magnifying glass on images (removed)
 -images touch-up?
 -add github logo/link for projects
--add logo/links for technologies used for projects (side)
+-add logo/links for technologies used for projects 
 -collapsable 'more images'
 -change color scheme
 -add responsiveness
