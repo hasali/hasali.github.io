@@ -42,9 +42,9 @@ function closeBanner()
 //var col = document.getElementsByClassName("slide");
 
 
-angular.module('myApp', ['ngRoute', 'ngAnimate', 'routeStyles', 'angularSlideables'])
+var myApp = angular.module('myApp', ['ngRoute', 'ngAnimate', 'routeStyles', 'angularSlideables']);
 
-.config(function($locationProvider, $routeProvider) {
+myApp.config(function($locationProvider, $routeProvider) {
 	//$locationProvider.hashPrefix('');
 	//$locationProvider.html5Mode({enabled:true, requireBase: false});
 	$routeProvider
@@ -70,28 +70,10 @@ angular.module('myApp', ['ngRoute', 'ngAnimate', 'routeStyles', 'angularSlideabl
 	.otherwise({redirectTo: '/'});
 
 
-  })
-.controller('imgController',['$scope', function($scope){
+  });
 
-  // $scope.showImg = false;
-  // $scope.flipBtn = false;
 
-  // $scope.changeBtn = function(ev)
-  // {
-  //   // for(var i = 0; i < btns.length; i++)
-  //   // {
-  //   //   if(!$scope.flipBtn)
-  //   //     $scope.flipBtn = true;
-  //   //   else
-  //   //     $scope.flipBtn = false;
-  //   // }
-  //   var element = ev.srcElement ? ev.srcElement : ev.target;
-  //   console.log(element.);
-  // };
-  
-}])
-
-.directive('toggleClass', function() {
+myApp.directive('toggleClass', function() {
   return {
       restrict: 'A',
       link: function(scope, element, attrs) {
@@ -100,8 +82,8 @@ angular.module('myApp', ['ngRoute', 'ngAnimate', 'routeStyles', 'angularSlideabl
           });
       }
   };
-})
-.run(['$location', function ($location) {
+});
+myApp.run(['$location', function ($location) {
   $location.path('/');
 }]);
 

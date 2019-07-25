@@ -1,7 +1,8 @@
 .app
 {
 	width: auto;
-	border-bottom: solid grey;
+	border-bottom: 1px solid #e6e6e6;
+	border-radius: 0.1px;
 }
 .canvas
 {
@@ -134,7 +135,7 @@ img
 .btn:after
 {
 	content: '\002B';
-	color: red;
+	color: #00b3b3;
 	//font-size: 1.47em;
 	cursor: pointer;
 	display: block;
