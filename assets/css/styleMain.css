@@ -276,17 +276,22 @@ div.logo-name p:nth-of-type(2)
 	//height: 100%;
 	position: relative;
 	top: 20%;
+	min-height: 100vh;
 	//z-index: -1;
+	//padding-bottom: 2.5em;
 }
 
 footer
 {
 	background: #3b3c3f;
 	//display: block;
-	top: 25%;
-	padding: 2em 0;
-	position: relative;
+	//top: 25%;
+	//padding: 2em 0;
 	z-index: -1;
+	bottom: 0;
+	height: 4em;
+    position: absolute;
+    width: 100%;
 }
 
 .footer-container
@@ -296,6 +301,8 @@ footer
     margin-left: auto;
     padding-left: 15px;
     padding-right: 15px;
+
+
 }
 
 .footer-container p
