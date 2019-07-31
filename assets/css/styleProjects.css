@@ -15,7 +15,7 @@
 }
 h3 
 {
-	/*margin: 0;
+/*	margin: 0;
 	padding: 0;*/
 }
 /*.canvas.ng-hide 
@@ -118,11 +118,9 @@ img
     width: 100%;
   }
 }
-.btnCtrl
+.btnContainer
 {
-	max-height: 0;
-  	overflow: hidden;
-  	transition: max-height 0.2s ease-out;
+	display: flex;
 }
 /*.canvas
 {
@@ -151,17 +149,10 @@ img
 	right: 0;
 }
 
-.plsBtn:after
-{
-	//content: '\002B';
-	
-
-}
 
 .minBtn:after
 {
 	content: '\2212';
-	
 }
 
 .app-nav
@@ -169,5 +160,23 @@ img
 	width: 100%;
 	display: flex;
 	justify-content: space-between;
+	z-index: -1;
+}
 
+.gitlogo
+{
+	width: 25px;
+	height: 25px;
+	margin: 10px;
+	transition: 0.3s;
+	cursor: pointer;
+	//z-index: 999;
+	//filter: brightness(30%);
+	opacity: 1;
+}
+
+.gitlogo:hover 
+{
+	//transition: 0.1s;
+	opacity: 0.4;
 }
