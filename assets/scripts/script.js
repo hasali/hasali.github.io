@@ -76,7 +76,7 @@ myApp.config(function($locationProvider, $routeProvider) {
 myApp.directive('toggleClass', function() {
   return {
       restrict: 'A',
-      link: function(scope, element, attrs) {
+      link: function(scope, element, attrs) { 
           element.bind('click', function() {
               element.toggleClass(attrs.toggleClass);
               
@@ -88,7 +88,20 @@ myApp.run(['$location', function ($location) {
   $location.path('/');
 }]);
 
-
+// myApp.controller('formCtrl', function($scope, $http){
+//   $scope.sub = function(){
+//     $http.post('/', $scope.formData).
+//     then(function(response){
+//       $scope.status = response.status;
+//       $scope.data = response.data;
+//       console.log('post success');
+//     },function(response){
+//       $scope.status = response.status;
+//       $scope.data = response.data;
+//       console.error("post error")
+//     });
+//   }
+// });
 // app.controller('MainCtrl', function($scope, $routeParams, $route, $location) 
 // {
 //   $scope.$watch(function()
