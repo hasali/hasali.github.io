@@ -57,9 +57,9 @@ myApp.config(function($locationProvider, $routeProvider) {
 	})
 
 	.when('/Contact', {
-		templateUrl : 'Pages/Contact.html'
+		templateUrl : 'Pages/Contact.html',
 		//controller : 'ProjectsController'
-			
+		css: 'assets/css/styleContact.css'	
 	})
 
 	.when('/About', {
